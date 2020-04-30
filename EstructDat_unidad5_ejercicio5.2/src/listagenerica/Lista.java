@@ -41,7 +41,7 @@ public class Lista {
     public String toString() {
         String cadena = " ";
         for(int i=0; i<listita.size(); i++){
-            cadena += " -> " + listita.get(i).getDestino();
+            cadena += " -> " + (listita.get(i).getDestino()+1); //se suma uno para que no empiece a contar desde 0
         }
         return cadena;
     }
