@@ -51,12 +51,14 @@ public class GrafoAdcia{
         int i = 0;
         for (; (i < numVerts) && !encontrado; ){
             encontrado = tablAdc [i].equals(v);
-            if (!encontrado) i++ ; 
+            if (!encontrado){
+                i++ ;
+            } 
         }
         return (i < numVerts) ? i : -1 ;
     }
     
-    public void nuevoArco(String a, String b)throws Exception{
+    public void nuevoArco(String a, String b) throws Exception{
         if (!adyacente(a, b)){
             int va = numVertice(a);
             int vb = numVertice(b);
