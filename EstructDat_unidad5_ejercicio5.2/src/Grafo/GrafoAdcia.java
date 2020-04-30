@@ -44,7 +44,6 @@ public class GrafoAdcia{
 
     // numVertice() busca el vértice en la tabla. 
     // Devuelve -1 si no lo encuentra:
-
     public int numVertice(String nm){
         VerticeAdy v = new VerticeAdy(nm);
         boolean encontrado = false;
@@ -59,6 +58,7 @@ public class GrafoAdcia{
     }
     
     public void nuevoArco(String a, String b) throws Exception{
+
         if (!adyacente(a, b)){
             int va = numVertice(a);
             int vb = numVertice(b);
@@ -107,6 +107,15 @@ public class GrafoAdcia{
             return false;
         }
     }
+
+    
+    public void imprimir() {
+        for(int i=0; i < this.numVerts; i++){
+            System.out.println(tablAdc[i].nombre + tablAdc[i].lad.toString());
+        }
+    }
+    
+    
     
  }  //fin clase
 

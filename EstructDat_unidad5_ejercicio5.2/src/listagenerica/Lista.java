@@ -40,8 +40,8 @@ public class Lista {
     @Override
     public String toString() {
         String cadena = " ";
-        for(Arco arcos : this.listita){
-            cadena += " -> " + arcos.getDestino();
+        for(int i=0; i<listita.size(); i++){
+            cadena += " -> " + listita.get(i).getDestino();
         }
         return cadena;
     }
