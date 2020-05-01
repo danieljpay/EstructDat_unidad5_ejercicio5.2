@@ -26,9 +26,9 @@ public class Main {
         GrafoAdcia grafito = new GrafoAdcia(verticesGrafo);
         
         //se nombran los vértices en la lista principal
-        System.out.println("Se nombrarán los vértices del 1 al número de vértices ingresado");
         for(int i=1; i<=verticesGrafo; i++){
-            nombre = i+"";
+            System.out.println("Ingresa el nombre del vértice " + i);
+            nombre = entrada.next();
             grafito.nuevoVertice(nombre);
         }
         

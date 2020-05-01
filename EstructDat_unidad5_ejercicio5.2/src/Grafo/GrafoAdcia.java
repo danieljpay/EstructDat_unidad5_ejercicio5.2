@@ -111,11 +111,9 @@ public class GrafoAdcia{
     
     public void imprimir() {
         for(int i=0; i < this.numVerts; i++){
-            System.out.println(tablAdc[i].nombre + tablAdc[i].lad.toString());
+            System.out.println(tablAdc[i].nombre + tablAdc[i].lad.toString(tablAdc));
         }
     }
-    
-    
     
  }  //fin clase
 

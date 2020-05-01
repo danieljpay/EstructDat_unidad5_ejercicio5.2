@@ -1,6 +1,7 @@
 package listagenerica;
 
 import Grafo.Arco;
+import Grafo.VerticeAdy;
 import java.util.ArrayList;
 
 /**
@@ -37,11 +38,10 @@ public class Lista {
     
     
     //imprimir los arcos en la lista
-    @Override
-    public String toString() {
+    public String toString(VerticeAdy[] vertis) {
         String cadena = " ";
         for(int i=0; i<listita.size(); i++){
-            cadena += " -> " + (listita.get(i).getDestino()+1); //se suma uno para que no empiece a contar desde 0
+            cadena += " -> " + vertis[listita.get(i).getDestino()].nomVertice(); //se suma uno para que no empiece a contar desde 0
         }
         return cadena;
     }
