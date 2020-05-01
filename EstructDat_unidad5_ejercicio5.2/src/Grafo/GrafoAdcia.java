@@ -66,7 +66,9 @@ public class GrafoAdcia{
                 throw new Exception("Vértice no existe");
             }
             Arco ab = new Arco(vb);
+            Arco cd = new Arco(va);
             tablAdc[va].lad.insertarCabezaLista(ab);
+            tablAdc[vb].lad.insertarCabezaLista(cd);
         }     
     }
     
