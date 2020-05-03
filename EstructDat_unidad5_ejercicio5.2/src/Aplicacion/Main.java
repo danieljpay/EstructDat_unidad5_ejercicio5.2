@@ -47,6 +47,9 @@ public class Main {
         //se imprime la lista principal con sus arcos
         System.out.println("\nLista principal:");
         grafito.imprimir();
+        
+        //recorrido de anchura
+        grafito.recoAnchura();
     }
     
 }

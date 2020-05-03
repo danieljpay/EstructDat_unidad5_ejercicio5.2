@@ -1,4 +1,8 @@
 package Grafo;
+import Cola.Cola;
+import Cola.ColaLlenaException;
+import Cola.ColaVaciaException;
+import java.util.ArrayList;
 import listagenerica.*;
 
 //NOTA: REQUIERE CODIGO DE LISTA GENERICA
@@ -115,6 +119,44 @@ public class GrafoAdcia{
         for(int i=0; i < this.numVerts; i++){
             System.out.println(tablAdc[i].nombre + tablAdc[i].lad.toString(tablAdc));
         }
+    }
+    
+    public void recoAnchura() throws ColaLlenaException, ColaVaciaException{
+        ArrayList<VerticeAdy> procesados = new ArrayList<VerticeAdy>();
+        Cola porProcesar = new Cola();
+        ArrayList<Arco> listaAdy = new ArrayList<Arco>();
+        boolean procesado = false;
+        String prosados = "";
+        
+        porProcesar.insert(this.tablAdc[0]);
+        
+        while (procesados.size() != tablAdc.length) {
+            System.out.println("Nodo actual: " + porProcesar.front().nomVertice());
+            prosados="";
+            if(!procesados.isEmpty()){
+                for (int p = 0; p < procesados.size(); p++) {
+                    prosados+= procesados.get(p).nombre + " ";
+                }
+            }
+            System.out.println("Procesados: " + prosados);
+            
+            listaAdy = porProcesar.front().lad.getListita();
+            for(int i=0; i<listaAdy.size(); i++){
+                procesado=false;
+                for(int j=0; j<procesados.size(); j++){
+                    if( tablAdc[listaAdy.get(i).destino] == procesados.get(j) ){
+                        procesado=true;
+                    }
+                }
+                if (procesado == false) {
+                    porProcesar.insert(this.tablAdc[listaAdy.get(i).destino]);
+                }
+            }
+            procesados.add(porProcesar.front());
+            porProcesar.remove();
+        }
+        
+        System.out.println("Todos los vértices han sido procesados :)");
     }
     
  }  //fin clase

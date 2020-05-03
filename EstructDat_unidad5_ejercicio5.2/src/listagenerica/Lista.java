@@ -13,6 +13,10 @@ public class Lista {
 
     public Lista() {
     }
+
+    public ArrayList<Arco> getListita() {
+        return listita;
+    }
     
     //insertar arco 
     public void insertarCabezaLista(Arco unArco){
@@ -35,7 +39,6 @@ public class Lista {
         }
         return encontrado;
     }
-    
     
     //imprimir los arcos en la lista
     public String toString(VerticeAdy[] vertis) {
