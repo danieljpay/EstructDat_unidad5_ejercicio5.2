@@ -49,6 +49,7 @@ public class Main {
         grafito.imprimir();
         
         //recorrido de anchura
+        System.out.println("\nRecorrdo de anchura\n");
         grafito.recoAnchura();
     }
     

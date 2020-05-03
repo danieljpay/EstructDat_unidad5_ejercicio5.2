@@ -156,7 +156,7 @@ public class GrafoAdcia{
             porProcesar.remove();
         }
         
-        System.out.println("Todos los vértices han sido procesados :)");
+        System.out.println("\nRecorrdio de anchura listo, todos los vértices han sido procesados :)");
     }
     
  }  //fin clase
